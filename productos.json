@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "nombre": "Parche redondo",
+        "precio": 690,
+        "tipo": "parche",
+        "pack": "100 unidades",
+        "dimension": "44 mm",
+        "descripcion": "Repuesto de parche rendondo para reparar cubiertas de cámara de motos, autos y pick Up",
+        "marca": "LM",
+        "imagen": "../images/tienda/parches/parche_redondo.png"
+    },
+    {
+        "id": 2,
+        "nombre": "Parche tarugo",
+        "precio": 2200,
+        "tipo": "parche",
+        "pack": "50 unidades",
+        "dimension": "100 mm",
+        "descripcion": "Repuesto de parche tarugo para reparar cubiertas de cámara de motos, autos y pick Up",
+        "marca": "Super Seal",
+        "imagen": "../images/tienda/parches/parche_tarugo.png"
+    },
+    {
+        "id": 3,
+        "nombre": "Parche rectangular",
+        "precio": 950,
+        "tipo": "parche",
+        "pack": "10 unidades",
+        "dimension": "75 x 55 mm",
+        "descripcion": "Repuesto de parche rectangular para reparar de cubiertas de autos y pick Up",
+        "marca": "Brio",
+        "imagen": "../images/tienda/parches/parche_rectangular.png"
+    },
+    {
+        "id": 4,
+        "nombre": "Parche cruz",
+        "precio": 2800,
+        "tipo": "parche",
+        "pack": "10 unidades",
+        "dimension": "200 x 200 mm",
+        "descripcion": "Repuesto de parche cruz para reparar de cubiertas de tractores",
+        "marca": "Brio",
+        "imagen": "../images/tienda/parches/parche_cruz.png"
+    },
+    {
+        "id": 5,
+        "nombre": "Parche ovalado",
+        "precio": 2685,
+        "tipo": "parche",
+        "pack": "30 unidades",
+        "dimension": "75 x 45 mm",
+        "descripcion": "Repuesto de parche ovalado para reparar de cubiertas de auto o camiones.",
+        "marca": "Precurex",
+        "imagen": "../images/tienda/parches/parche_ovalado.png"
+    },
+    {
+        "id": 6,
+        "nombre": "Kit simple",
+        "precio": 365,
+        "tipo": "kit parche",
+        "descripcion": "2 pinzas.3 tarugos.1 pomo de pegamento.",
+        "imagen": "../images/tienda/parches/kit-parche-simple.png"
+    },
+    {
+        "id": 7,
+        "nombre": "Kit completo",
+        "precio": 2435,
+        "tipo": "kit parche",
+        "descripcion": "1 Cemento en lata de 250cc con pincel aplicador marca PRECUREX.1 caja de 100 parches redondos de 40mm marca LM.1 Bolsa de 10 unidades de parches cuadrados de 55 x 55mm para cubiertas .1 Terraja saca interiores de válvula mango plástico importada.",
+        "imagen": "../images/tienda/parches/kit-parche-completo.png"
+    }
+    
+]

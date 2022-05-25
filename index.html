@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GVMultillantas - Inicio</title>
+    <meta name="description" content="¡Hola somos GVMultillantas! Queremos ofrecerte el mejor servicio personalizado para tus neumáticos.">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
+    <!-- Bootstrap css -->
+    <!--<link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <!-- Bootstrap icons -->
+    <!--<link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
+    <!-- Estilos css -->
+    <link rel="stylesheet" href="estilos.css">
+    <!-- Montserrat font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header-parches">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">
+                    <img src="../images/logo.png" alt="Logo Gv Multillantas" width="160" height="70">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../index.html"> INICIO </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/servicios.html"> SERVICIOS </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/tienda.html"> TIENDA </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./pages/contacto.html"> CONTACTO </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-lg-none" href="./pages/carrito.html"> CARRITO</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-lg-none" href="./iniciar-sesion.html" id="btn-sesion-mobile"> INICIAR SESIÓN</a>
+                        </li>
+                        
+                    </ul>
+                    <a class="nav-link carrito d-none d-lg-block" href="./pages/carrito.html"> 
+                            <i class="bi bi-cart position-relative" style="font-size: 2em;">
+                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger " id="nroItemsCarrito" style="font-size: 0.35em;">
+                                  <span class="visually-hidden">unread messages</span>
+                                </span>
+                            </i>
+                    </a>
+                    
+                    <a class="nav-link iniciar-sesion d-none d-lg-block" href="./pages/iniciar-sesion.html" id="btn-sesion"> INICIAR SESIÓN</a>
+                    <p class="text-uppercase d-none d-lg-block"id="usuario-registrado"></p>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <a href="https://wa.me/528114966957" class="btn-wsp" target="_blank">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+        <div>
+            <img src="./images/banner-index-rosa.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+        </div>
+        <div class="container">
+            <div class="row">
+              <h2 class="text-center mt-5 title-marcas">Tenemos las mejores marcas</h2>
+            </div>
+            <section class="d-lg-block d-none mb-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 d-flex">
+                          <a class="btn align-self-center me-3 btn-carousel" href="#carouselExampleIndicators1" role="button" data-bs-slide="prev">
+                            <i class="bi bi-arrow-left-short"></i>
+                        </a>
+                        <a class="btn align-self-center order-last ms-3 btn-carousel" href="#carouselExampleIndicators1" role="button" data-bs-slide="next">
+                          <i class="bi bi-arrow-right-short"></i>
+                        </a>
+                            <div id="carouselExampleIndicators1" class="carousel slide" data-bs-ride="carousel">
+            
+                                <div class="carousel-inner row">
+                                    <div class="carousel-item active">
+                                        <div class="row">
+            
+                                            <div class="col-md-3 mb-3">
+                                                <div class="card">
+                                                    <img class="img-fluid" alt="michelin" src="./images/marcas/michelin.png">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"> Michelin </h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 mb-3">
+                                                <div class="card">
+                                                    <img class="img-fluid" alt="bf goodrich" src="./images/marcas/bf_goodrich.png">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"> Bf goodrich </h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 mb-3">
+                                                <div class="card">
+                                                    <img class="img-fluid" alt="uniroyal" src="./images/marcas/uniroyal.png">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"> Uniroyal </h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="col-md-3 mb-3">
+                                              <div class="card">
+                                                  <img class="img-fluid" alt="bridgestone" src="./images/marcas/bridgestone.png">
+                                                  <div class="card-body">
+                                                      <h4 class="card-title"> Bridgestone </h4>
+                                                  </div>
+                                              </div>
+                                          </div>
+            
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+            
+                                            <div class="col-md-3 mb-3">
+                                                <div class="card">
+                                                    <img class="img-fluid" alt="firestone" src="./images/marcas/firestone.png">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"> Firestone </h4>
+                                                    </div>
+            
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 mb-3">
+                                                <div class="card">
+                                                    <img class="img-fluid" alt="continental" src="./images/marcas/continental.png">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"> Continental </h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 mb-3">
+                                                <div class="card">
+                                                    <img class="img-fluid" alt="tornel" src="./images/marcas/tornel.png">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"> Tornel </h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="col-md-3 mb-3">
+                                              <div class="card">
+                                                  <img class="img-fluid" alt="cooper" src="./images/marcas/cooper.png">
+                                                  <div class="card-body">
+                                                      <h4 class="card-title"> Cooper </h4>
+                                                  </div>
+                                              </div>
+                                          </div>
+            
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+            
+                                            <div class="col-md-3 mb-3">
+                                                <div class="card">
+                                                    <img class="img-fluid" alt="pirelli" src="./images/marcas/pirelli.png">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"> Pirelli </h4>
+                                                    </div>
+            
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 mb-3">
+                                                <div class="card">
+                                                    <img class="img-fluid" alt="hankook" src="./images/marcas/hankook.png">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"> Hankook </h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 mb-3">
+                                                <div class="card">
+                                                    <img class="img-fluid" alt="goodyear" src="./images/marcas/goodyear.png">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"> Goodyear </h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+    
+                                            <div class="col-md-3 mb-3">
+                                              <div class="card">
+                                                  <img class="img-fluid" alt="general" src="./images/marcas/general_tire.png">
+                                                  <div class="card-body">
+                                                      <h4 class="card-title"> General </h4>
+                                                  </div>
+                                              </div>
+                                          </div>
+            
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row">
+            
+                                            <div class="col-md-3 mb-3">
+                                                <div class="card">
+                                                    <img class="img-fluid" alt="yokohama" src="./images/marcas/yokohama.png">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"> Yokohama </h4>
+                                                    </div>
+            
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 mb-3">
+                                                <div class="card">
+                                                    <img class="img-fluid" alt="cachland" src="./images/marcas/cachland.png">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"> Cachland </h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 mb-3">
+                                                <div class="card">
+                                                    <img class="img-fluid" alt="trazano" src="./images/marcas/trazano.png">
+                                                    <div class="card-body">
+                                                        <h4 class="card-title"> Trazano </h4>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="d-md-block d-lg-none d-none">
+                <div class="row my-3">
+                    <div class="col-3">
+                        <img class="img-fluid" alt="michelin" src="./images/marcas/michelin.png">
+                    </div>
+                    <div class="col-3">
+                        <img class="img-fluid" alt="goodrich" src="./images/marcas/bf_goodrich.png">
+                    </div>
+                    <div class="col-3">
+                        <img class="img-fluid" alt="uniroyal" src="./images/marcas/uniroyal.png">
+                    </div>
+                    <div class="col-3">
+                        <img class="img-fluid" alt="bridgestone" src="./images/marcas/bridgestone.png">
+                    </div>
+                </div>
+                <div class="row my-3">
+                    <div class="col-3">
+                        <img class="img-fluid" alt="firestone" src="./images/marcas/firestone.png">
+                    </div>
+                    <div class="col-3">
+                        <img class="img-fluid" alt="continental" src="./images/marcas/continental.png">
+                    </div>
+                    <div class="col-3">
+                        <img class="img-fluid" alt="tornel" src="./images/marcas/tornel.png">
+                    </div>
+                    <div class="col-3">
+                        <img class="img-fluid" alt="cooper" src="./images/marcas/cooper.png">
+                    </div>
+                </div>
+                <div class="row my-3">
+                    <div class="col-3">
+                        <img class="img-fluid" alt="pirelli" src="./images/marcas/pirelli.png">
+                    </div>
+                    <div class="col-3">
+                        <img class="img-fluid" alt="hankook" src="./images/marcas/hankook.png">
+                    </div>
+                    <div class="col-3">
+                        <img class="img-fluid" alt="goodyear" src="./images/marcas/goodyear.png">
+                    </div>
+                    <div class="col-3">
+                        <img class="img-fluid" alt="general" src="./images/marcas/general_tire.png">
+                    </div>
+                </div>
+                <div class="row my-3">
+                    <div class="col-3">
+                        <img class="img-fluid" alt="yokohama" src="./images/marcas/yokohama.png">
+                    </div>
+                    <div class="col-3">
+                        <img class="img-fluid" alt="cachland" src="./images/marcas/cachland.png">
+                    </div>
+                    <div class="col-3">
+                        <img class="img-fluid" alt="trazano" src="./images/marcas/trazano.png">
+                    </div>
+                </div>
+            </section>
+
+            <section class="d-md-none marcas-container">
+                <div class="row my-3">
+                    <div class="col-4">
+                        <img class="img-fluid" alt="michelin" src="./images/marcas/michelin.png">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid" alt="goodrich" src="./images/marcas/bf_goodrich.png">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid" alt="uniroyal" src="./images/marcas/uniroyal.png">
+                    </div>
+                </div>
+                <div class="row my-3">
+                    <div class="col-4">
+                        <img class="img-fluid" alt="bridgestone" src="./images/marcas/bridgestone.png">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid" alt="firestone" src="./images/marcas/firestone.png">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid" alt="continental" src="./images/marcas/continental.png">
+                    </div>
+
+                </div>
+                <div class="row my-3">
+                    <div class="col-4">
+                        <img class="img-fluid" alt="tornel" src="./images/marcas/tornel.png">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid" alt="cooper" src="./images/marcas/cooper.png">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid" alt="pirelli" src="./images/marcas/pirelli.png">
+                    </div>
+                </div>
+                <div class="row my-3">
+                    <div class="col-4">
+                        <img class="img-fluid" alt="hankook" src="./images/marcas/hankook.png">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid" alt="goodyear" src="./images/marcas/goodyear.png">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid" alt="general" src="./images/marcas/general_tire.png">
+                    </div>
+                </div>
+                <div class="row my-3">
+                    <div class="col-4">
+                        <img class="img-fluid" alt="yokohama" src="./images/marcas/yokohama.png">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid" alt="cachland" src="./images/marcas/cachland.png">
+                    </div>
+                    <div class="col-4">
+                        <img class="img-fluid" alt="trazano" src="./images/marcas/trazano.png">
+                    </div>
+                </div>
+            </section>
+            
+            <div class="d-flex justify-content-center align-items-center mb-4 banner-seguridad ">
+                <a href="./pages/tienda.html"><img src="./images/banner_seguridad.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="seguridad de llantas"></a>
+            </div>
+
+            <div class="row">
+                <h2 class="text-center my-5 title-mediosPago">Nuestros medios de pago</h2>
+            </div>
+
+            <div class="row justify-content-center mediosPagos-imagenes mt-2">
+                <div class="col-3 d-flex justify-content-center align-items-center p-0">
+                    <img src="./images/MediosPagos/cash.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="efectivo">
+                </div>
+                <div class="col-3 d-flex justify-content-center align-items-center p-0">
+                    <img src="./images/MediosPagos/wire-transfer.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="transferencia bancaria">
+                    
+                </div>
+                <div class="col-3 d-flex justify-content-center align-items-center p-0">
+                    <img src="./images/MediosPagos/deposit.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="deposito bancario">
+                    
+                </div>
+            </div>
+
+            <div class="row justify-content-center mediosPagos-parrafos">
+                <div class="col-md-3 col-md- p-0">
+                    <p class="title-TipoPago my-4">Efectivo</p>
+                </div>
+                <div class="col-md-3 p-0">
+                    <p class="title-TipoPago my-4">Transferencia bancaria</p>
+                </div>
+                <div class="col-md-3 p-0">
+                    <p class="title-TipoPago my-4">Depósito bancario</p>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-8 col-center m-auto">
+                    <h2 class="title-testimonios">Testimonios</h2>
+                    <div id="CarouselTestimonios" class="carousel slide" data-bs-ride="carousel">
+                        <!-- Carousel -->
+                        <div class="carousel-inner">
+                            <div class="item carousel-item active">
+                                <div class="img-box"><img src="https://i.ibb.co/d5DY64w/img1.jpg" alt=""></div>
+                                <p class="testimonial">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante. Idac bibendum scelerisque non non purus. Suspendisse varius nibh non aliquet.</p>
+                                <p class="overview"><b>Sabrina Diaz</b>, Ama de casa</p>
+                            </div>
+                            <div class="item carousel-item">
+                                <div class="img-box"><img src="https://i.ibb.co/5FF1vqz/img2.jpg" alt=""></div>
+                                <p class="testimonial">Vestibulum quis quam ut magna consequat faucibus. Pellentesque eget nisi a mi suscipit tincidunt. Utmtc tempus dictum risus. Pellentesque viverra sagittis quam at mattis. Suspendisse potenti. Aliquam sit amet gravida nibh, facilisis gravida odio.</p>
+                                <p class="overview"><b>David Guerrero</b>, Caminero</p>
+                            </div>
+                            <div class="item carousel-item">
+                                <div class="img-box"><img src="https://i.ibb.co/Trv7hDv/img3.jpg" alt=""></div>
+                                <p class="testimonial">Phasellus vitae suscipit justo. Mauris pharetra feugiat ante id lacinia. Etiam faucibus mauris id tempor egestas. Duis luctus turpis at accumsan tincidunt. Phasellus risus risus, volutpat vel tellus ac, tincidunt fringilla massa. Etiam hendrerit dolor eget rutrum.</p>
+                                <p class="overview"><b>Fabiana Rodriguez</b>, Taxista</p>
+                            </div>
+                        </div>
+                        <!-- Carousel Controls -->
+                        <a class="carousel-control left carousel-control-prev" href="#CarouselTestimonios" data-bs-slide="prev">
+                            <i class="bi bi-arrow-left-short"></i>
+                        </a>
+                        <a class="carousel-control right carousel-control-next" href="#CarouselTestimonios" data-bs-slide="next">
+                            <i class="bi bi-arrow-right-short"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+      <div class="my-4 footer-linea"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-xl-4 d-none d-xl-block">
+              <div>
+                <img src="./images/footer/frenada.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="Logo de GVMultillantas">
+              </div>
+            </div>
+            <div class="row col-xl-8 m-lg-auto">
+              <div class="mt-3">
+                <div class="d-inline-block col-sm-1 col-1">
+                  <img src="./images/footer/clock.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="horario">
+                </div>
+                <p class="d-inline-block ms-3 col-10">Lunes a Viernes 09:00 hs a 18:30 hs</p>
+              </div>
+              <div class="mt-3">
+                <div class="d-inline-block col-sm-1 col-1">
+                  <img src="./images/footer/phone-call.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="telefono">
+                </div>
+                <p class="d-inline-block ms-3 col-10">+52 81 1496 6957 / +52 81 80193871</p>
+              </div>
+              <div class="mt-3">
+                <div class="d-inline-block col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1">
+                  <img src="./images/footer/ubication.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="ubicacion">
+                </div>
+                <p class="d-inline-block col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 ms-3">Calle Cóndor 1503 Zitton Gualupe 671555 Guadalupe, Nuevo León, México</p>
+              </div>
+              <div class="d-flex justify-content-end align-items-center mt-3 footer-redesSociales">
+                <p class="d-inline-block me-1 me-sm-3">Seguinos !</p>
+                <a href="https://www.instagram.com/gvmultillantas/" class="d-inline-block mx-2" target="_blank">
+                  <img src="./images/footer/instagram.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="instagram">
+                </a>
+                <a href="https://www.facebook.com/gvmultillantas" class="d-inline-block mx-2" target="_blank">
+                  <img src="./images/footer/facebook.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="facebook">
+                </a>
+                <a href="https://wa.me/528114966957" class="d-inline-block mx-2" target="_blank">
+                  <img src="./images/footer/whatsapp.png" class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="whatsapp">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </footer>
+    <!--<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/nroCarrito.js"></script>
+</body>
+</html>

@@ -1,0 +1,770 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+
+/*** HEADER ***/
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: #FFF;
+}
+
+li.nav-item {
+    margin: -1% 1% 0 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.nav-link {
+    color: #525252;
+    font-size: 0.9rem;
+    background-image: linear-gradient(to right, #969696, #aba9ab, #bcbbbb);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+
+.nav-link:hover {
+    color: #949494;
+    background-size: 100% 2px;
+}
+
+.carrito{
+    margin-left: 3em;
+    color: #949494;
+    position: relative;
+    bottom: 3px;
+}
+
+.carrito:hover{
+    color: #525252;
+    background-size: 0;
+}
+
+.iniciar-sesion{
+    margin-left: 1em;
+    position: relative;
+    bottom: 2px;
+}
+
+#usuario-registrado{
+    position: relative;
+    top: 4px;
+    font-size: 1.3em;
+    margin-left: 20px;
+}
+
+/*** INDEX ***/
+
+.btn-wsp{
+    position: fixed;
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #0df053;
+    color: #FFD;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 40px;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    transition: all .5s ease;
+}
+
+.btn-wsp:hover{
+    color: #0df053;
+    background-color: #FFF;
+    transform: scale(1.05);
+}
+
+img[scr="./images/servicios/banner-servicios.png"]{
+    width: 1200px;
+}
+
+.title-marcas, .title-mediosPago, .title-presentacion-servicio{
+    font-size: 2em;
+    color: #333;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	position: relative;
+	margin: 30px 0 60px;
+}
+
+.title-marcas::after, .title-mediosPago::after, .title-presentacion-servicio::after{
+    content: "";
+	width: 480px;
+	position: absolute;
+	margin: 0 auto;
+	height: 3px;
+	background: #e545c5;
+	left: 0;
+	right: 0;
+	bottom: -10px;
+    opacity: .8;
+}
+
+.btn-carousel{
+    font-size: 1.2em;
+    color: #FFF;
+    background-color: #e545c5;
+    border: none;
+    transition: all .5s ease;
+}
+
+.btn-carousel:hover{
+    color: #FFF;
+    background-color: rgba(229,69,197,0.9);
+    transform: scale(1.05);
+    border: none;
+}
+
+.banner-seguridad a img{
+    border-radius: 10px;
+}
+
+.title-mediosPago::after{
+	width: 390px;
+}
+
+.title-TipoPago{
+    width: 250px;
+    margin: auto;
+    font-size: 1.5em;
+    font-weight: 800;
+    text-align: center;
+}
+
+/*** CAROUSEL DE TESTIMONIOS ***/
+
+.carousel-container {
+    padding: 40px 0;
+}
+
+.title-testimonios {
+	color: #333;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	position: relative;
+	margin: 30px 0 60px;
+}
+
+.title-testimonios::after {
+	content: "";
+	width: 150px;
+	position: absolute;
+	margin: 0 auto;
+	height: 3px;
+	background: #e545c5;
+	left: 0;
+	right: 0;
+	bottom: -10px;
+    opacity: .8;
+}
+
+.col-center {
+	margin: 0 auto;
+	float: none !important;
+}
+
+.carousel {
+	margin: 50px auto;
+	padding: 0 70px;
+}
+
+.carousel-item {
+	color: #999;
+	font-size: 14px;
+    text-align: center;
+	overflow: hidden;
+    min-height: 290px;
+}
+
+.carousel .item .img-box {
+	width: 135px;
+	height: 135px;
+	margin: 0 auto;
+	padding: 5px;
+	border: 1px solid #ddd;
+	border-radius: 50%;
+}
+
+.carousel .img-box img {
+	width: 100%;
+	height: 100%;
+	display: block;
+	border-radius: 50%;
+}
+
+.carousel .testimonial {
+	padding: 30px 0 10px;
+}
+
+.carousel .overview {	
+	font-style: italic;
+}
+
+.carousel .overview b {
+	text-transform: uppercase;
+	color: #e545c5;
+}
+
+.carousel .carousel-control {
+	width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    top: 50%;
+	background: none;
+}
+
+.carousel-control i {
+    font-size: 68px;
+	line-height: 42px;
+    position: absolute;
+    display: inline-block;
+	color: rgba(0, 0, 0, 0.8);
+    text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+}
+
+.carousel .carousel-indicators {
+	bottom: -40px;
+}
+
+.carousel-indicators li, .carousel-indicators li.active {
+	width: 10px;
+	height: 10px;
+	margin: 1px 3px;
+	border-radius: 50%;
+}
+
+.carousel-indicators li {	
+	background: #999;
+	border-color: transparent;
+	box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+}
+
+.carousel-indicators li.active {	
+	background: #555;		
+	box-shadow: inset 0 2px 1px rgba(0,0,0,0.2);
+}
+
+
+/*** FOOTER ***/
+
+footer {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #333;
+}
+
+.footer-linea {
+    background-color: #333;
+    height: 4px;
+}
+
+.footer-redesSociales img {
+    width: 80px;
+}
+
+.footer-redesSociales p {
+    position: relative;
+    top: 5px;
+}
+
+img[src="./images/footer/ubication.png"] {
+    position: relative;
+    bottom: 0.8em;
+}
+
+.footer-redesSociales p {
+    font-size: 1.6em;
+}
+
+/*** SERVICIOS ***/
+
+.title-presentacion-servicio::after{
+    width: 290px;
+}
+
+.image-servicio img{
+    border-radius: 40px;
+}
+
+.text-servicio{
+    text-align: justify;
+}
+
+
+/*** TIENDA ***/
+
+
+.title-productos {
+    font-size: 2em;
+    color: #333;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+	position: relative;
+	margin: 30px 0 60px;
+}
+
+
+.title-productos::after {
+    content: "";
+	width: 155px;
+	position: absolute;
+	margin: 0 auto;
+	height: 3px;
+	background: #e545c5;
+	left: 0;
+	right: 0;
+	bottom: -10px;
+    opacity: .8;
+}
+
+
+.w-card {
+    box-shadow: 0px 1px 10px rgb(0 0 0 / 20%);
+    transition: all 400ms ease;
+}
+
+.text-f {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.b-btn {
+
+    border: 1.05px solid #000000;
+
+}
+
+.b-btn:hover {
+    background-color: #000000;
+    color: #FFF
+}
+
+
+/*** CONTACTO ***/
+
+font-p {
+    font-size: 1.20rem;
+    font-weight: 800;
+}
+
+.font-p-u {
+    font-size: 1.20rem;
+    font-weight: 600;
+}
+
+/*** PARCHES ***/
+
+.header-parches{
+    border-bottom: solid 2px #c9c9c9;
+}
+
+.title-parches, .subtitle-parches{
+    font-size: 2em;
+    color: #333;
+	font-weight: bold;
+	position: relative;
+	margin: 30px 0 60px;
+}
+
+.title-parches::after{
+    content: "";
+    width: 120px;
+    position: absolute;
+    margin: 0 auto;
+    height: 3px;
+    background: #e545c5;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    opacity: .8;
+}
+
+.card-title{
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.card-text{
+    font-size: 1.1em;
+}
+
+.precio{
+    font-weight: bold;
+    font-size: 2em;
+}
+
+/*** CARRITO ***/
+
+.main-carrito{
+    min-height: 800px;
+}
+
+/*** INICIAR SESION ***/
+
+.block-information{
+    width: 95%;
+    margin: auto;
+    background-color: #F4F4F4;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.block-information:first-child{
+    margin-top: 20px;
+}
+
+.title-data{
+    font-family: Impact;
+    font-size: 2.5em;
+    line-height: 1.5em;
+    color: #2a2a2a;
+    margin-bottom: 0;
+    margin-left: 30px;
+}
+
+
+#sign-in-btn, #register-btn{
+    padding: 5px 40px;
+    font-size: 2em;
+    font-family: Impact;
+    background-color: #FFF;
+    color: #2a2a2a;
+    border: 3px solid #2a2a2a;
+    border-radius: 10px;
+    margin: auto;
+    display: block;
+    transition: all 1s ease;
+}
+
+#password{
+    margin-left: 9px;
+}
+
+label[for="password"]{
+    margin-left: 55px;
+}
+
+.register a{
+    color: #2a2a2a;
+    text-decoration: none; 
+}
+
+#sign-in-btn:hover, #register-btn:hover{
+    transform: scale(1.05);
+}
+
+.input-form{
+    height: 30px;
+    font-size: 1.2em;
+    font-family: sans-serif;
+    border-radius: 5px;
+    border: 1px solid #c2c2c2;
+    background-color: #f2f2f2;
+    transition: all 1s ease;
+}
+
+.input-form:focus{
+    background-color: #fffee8;
+}
+
+/*** REGISTRO ***/
+
+.confirmPassword{
+    position: relative;
+    right: 8px;
+}
+
+
+
+
+@media (min-width: 1200px) {
+
+    /*** INDEX ***/
+
+    .title-marcas{
+        font-size: 2em;
+    }
+    
+    /*** FOOTER ***/
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    /*** HEADER ***/
+    
+    #usuario-registrado{
+        font-size: 1.1em;
+        margin-left: 10px;
+    }
+
+    /*** INDEX ***/
+
+    .title-marcas{
+        font-size: 2em;
+    }
+
+    .card-title{
+        font-size: 1.2em;
+        color: #333;
+    }
+    
+    .mediosPagos-parrafos div p{
+        width: 240px ;
+    }
+
+
+    
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+
+
+    /*** INDEX ***/
+
+    .btn-wsp{
+        width: 65px;
+        height: 65px;
+        line-height: 65px;
+        font-size: 35px;
+    }
+
+    .title-marcas, .title-mediosPago{
+        font-size: 1.7em;
+    }
+
+    .title-marcas::after{
+        width: 410px;
+    }
+
+    .title-mediosPago::after{
+        width: 330px;
+    }
+    
+    .mediosPagos-imagenes div img{
+        width: 150px;
+    }
+
+    .mediosPagos-parrafos div p{
+        width: 150px;
+        font-size: 1.2em;
+    }
+
+    /*** FOOTER ***/
+
+
+    /*** SERVICIOS ***/
+
+    .title-presentacion-servicio{
+        font-size: 1.7em;
+    }
+
+    .title-presentacion-servicio::after{
+        width: 240px;
+    }
+
+    /*** INICIAR SESION ***/
+
+    .title-data{
+        font-size: 2.5em;
+        margin-left: 5px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+
+
+    /*** INDEX ***/
+
+    .btn-wsp{
+        width: 65px;
+        height: 65px;
+        line-height: 65px;
+        font-size: 35px;
+    }
+
+
+    .title-marcas, .title-mediosPago{
+        font-size: 1.7em;
+    }
+
+    .title-marcas::after{
+        width: 400px;
+    }
+
+    .title-mediosPago, .title-productos::after{
+        width: 340px;
+    }
+    
+    .mediosPagos-parrafos{
+        display: none;
+    }
+
+    .mediosPagos-imagenes div img{
+        width: 100px;
+    }
+
+    .title-testimonios::after{
+        width: 130px;
+    }
+
+    /*** FOOTER ***/
+
+    footer {
+        font-size: 1.2em;
+    }
+
+    .footer-redesSociales p {
+        font-size: 1.4em;
+    }
+
+    img[src="./images/footer/instagram.png"],
+    img[src="./images/footer/facebook.png"],
+    img[src="./images/footer/whatsapp.png"] {
+        width: 64px;
+    }
+
+    /*** SERVICIOS ***/
+
+    .title-presentacion-servicio{
+        font-size: 1.7em;
+    }
+
+    .title-presentacion-servicio::after{
+        width: 240px;
+    }
+
+    /*** INICIAR SESION ***/
+
+    .title-data{
+        font-size: 2.5em;
+        margin-left: 5px;
+    }
+
+}
+
+@media (max-width: 575px) {
+
+    /*** INDEX ***/
+
+    .btn-wsp{
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
+        font-size: 30px;
+    }
+
+    .title-marcas, .title-mediosPago, .title-testimonios{
+        font-size: 1.2em;
+    }
+
+    .title-marcas::after{
+        width: 280px;
+    }
+
+    .title-mediosPago, .title-productos ::after{
+        width: 230px;
+    }
+
+    .title-testimonios::after{
+        width: 85px;
+    }
+    
+
+    .marcas-container, .mediosPagos-imagenes{
+        padding: 0px 20px;
+    }
+
+    .mediosPagos-parrafos{
+        display: none;
+    }
+
+    .mediosPagos-imagenes div img{
+        width: 80px;
+    }
+
+    /*** FOOTER ***/
+
+    footer {
+        font-size: 1.05em;
+    }
+
+    .footer-redesSociales p {
+        font-size: 1.2em;
+    }
+
+    img[src="./images/footer/instagram.png"],
+    img[src="./images/footer/facebook.png"],
+    img[src="./images/footer/whatsapp.png"] {
+        width: 56px;
+    }
+
+    /*** SERVICIOS ***/
+
+    .title-presentacion-servicio{
+        font-size: 1.2em;
+    }
+
+    .title-presentacion-servicio::after{
+        width: 180px;
+    }
+
+     /*** TIENDA ***/
+    
+     .card {
+        width: 80vw !important;
+    }
+
+
+    /*** CONTACTO ***/
+
+    img[src="../images/footer/clock.png"],
+    img[src="../images/footer/ubication.png"] {
+        width: 50px;
+    }
+
+    /*** INICIAR SESION ***/
+
+    .title-data{
+        margin: 0;
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    #password{
+        margin-left: 0;
+    }
+    
+    label[for="password"]{
+        margin-left: 0;
+    }
+    
+    /*** REGISTRO ***/
+
+    .confirmPassword{
+        margin-left: 16px;
+    }
+
+}
