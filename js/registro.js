@@ -5,8 +5,9 @@ let answers = ['Ya existe un usuario con ese nombre de usuario',
                 'Las contraseñas no coinciden',
                 'Hay campos vacios']
 class User{
-    constructor(userName,password){
+    constructor(userName,email,password){
         this.userName = userName;
+        this.email = email;
         this.password = password;
     }
 }
@@ -14,6 +15,7 @@ class User{
 
 document.getElementById('register-btn').addEventListener('click',function(e){
     let username = document.getElementById('username').value;
+    let email = document.getElementById('email').value.toLowerCase();
     let password = document.getElementById('password').value;
     let confirmPassword = document.getElementById('confirmPassword').value;
     e.preventDefault();
@@ -27,11 +29,11 @@ document.getElementById('register-btn').addEventListener('click',function(e){
     password == confirmPassword || swal({title: 'Error',
                                         text:answers[1],
                                         icon:'error'});
-    (username != '' && password != '' && confirmPassword != '')|| swal({title: 'Error',
-                                                                        text:answers[1],
-                                                                        icon:'error'});
-    if(! userNameList.includes(username) && password == confirmPassword  && (username != '' && password != '' && confirmPassword != '')){
-        let user = new User(username,password);
+    (username != '' && password != '' && email != '' && confirmPassword != '')|| swal({title: 'Error',
+                                                                                       text:answers[1],
+                                                                                       icon:'error'});
+    if(! userNameList.includes(username) && password == confirmPassword  && (username != '' && password != '' && confirmPassword != '' && email != '')){
+        let user = new User(username,email,password);
         usersList.push(JSON.stringify(user));
         localStorage.setItem('userList',JSON.stringify(usersList));
         document.getElementById('register-form').reset();

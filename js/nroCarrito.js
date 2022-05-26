@@ -1,5 +1,5 @@
 const nroItemCarrito = document.getElementById('nroItemsCarrito')
-const usuarioRegistrado = document.getElementById('usuario-registrado')
+const usuarioActivo = document.getElementById('usuario-registrado')
 const btnSesion = document.getElementById('btn-sesion')
 const btnSesionMobile = document.getElementById('btn-sesion-mobile')
 
@@ -13,18 +13,31 @@ document.addEventListener('DOMContentLoaded', () =>{
         btnSesion.setAttribute('href','./iniciar-sesion.html')
         btnSesionMobile.setAttribute('href','./iniciar-sesion.html')
     }
+
+    if(!(localStorage.getItem('usuarioActivo') || sessionStorage.getItem('usuarioActivo'))){
+        localStorage.removeItem('carrito')
+    }
     
     btnSesion.textContent = "INICIAR SESION"
     btnSesionMobile.textContent = "INICIAR SESION"
-    let usuarioRecuperado
     let carrito = {}
-    if (localStorage.getItem('carrito')) {
+    if (localStorage.getItem('carrito') && (localStorage.getItem('usuarioActivo') || sessionStorage.getItem('usuarioActivo'))) {
         carrito = JSON.parse(localStorage.getItem('carrito'))
     }
     Object.keys(carrito).length === 0? nroItemCarrito.textContent = 0 : nroItemCarrito.textContent = Object.keys(carrito).length
-    if (localStorage.getItem('registeredUsername')) {
-        usuarioRecuperado = localStorage.getItem('registeredUsername')
-        usuarioRegistrado.textContent = 'Hola ' + usuarioRecuperado + " !"
+    if (localStorage.getItem('usuarioActivo')) {
+        // Desestructuración de array
+        [usuarioRecuperado,emailRecuperado] = JSON.parse(localStorage.getItem('usuarioActivo'))
+        usuarioActivo.textContent = 'Hola ' + usuarioRecuperado + " !"
+        btnSesion.textContent = "CERRAR SESION"
+        btnSesion.setAttribute('href','../index.html')
+        btnSesionMobile.textContent = "CERRAR SESION"
+        btnSesionMobile.setAttribute('href','../index.html')
+    }
+    if (sessionStorage.getItem('usuarioActivo')){
+        // Desestructuración de array
+        [usuarioRecuperado,emailRecuperado] = JSON.parse(sessionStorage.getItem('usuarioActivo'))
+        usuarioActivo.textContent = 'Hola ' + usuarioRecuperado + " !"
         btnSesion.textContent = "CERRAR SESION"
         btnSesion.setAttribute('href','../index.html')
         btnSesionMobile.textContent = "CERRAR SESION"
@@ -35,14 +48,18 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 btnSesion.addEventListener('click', () =>{
     if(btnSesion.textContent == "CERRAR SESION"){
-        localStorage.removeItem('registeredUsername')
-        usuarioRegistrado.textContent = " "
+        localStorage.removeItem('usuarioActivo')
+        sessionStorage.removeItem('usuarioActivo')
+        localStorage.removeItem('carrito')
+        usuarioActivo.textContent = " "
     }
 })
 
 btnSesionMobile.addEventListener('click', () =>{
     if(btnSesionMobile.textContent == "CERRAR SESION"){
-        localStorage.removeItem('registeredUsername')
-        usuarioRegistrado.textContent = " "
+        localStorage.removeItem('usuarioActivo')
+        sessionStorage.removeItem('usuarioActivo')
+        localStorage.removeItem('carrito')
+        usuarioActivo.textContent = " "
     }
 })

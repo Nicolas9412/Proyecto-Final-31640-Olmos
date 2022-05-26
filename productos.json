@@ -69,6 +69,45 @@
         "tipo": "kit parche",
         "descripcion": "1 Cemento en lata de 250cc con pincel aplicador marca PRECUREX.1 caja de 100 parches redondos de 40mm marca LM.1 Bolsa de 10 unidades de parches cuadrados de 55 x 55mm para cubiertas .1 Terraja saca interiores de válvula mango plástico importada.",
         "imagen": "../images/tienda/parches/kit-parche-completo.png"
+    },
+    {
+        "id": 7,
+        "nombre": "Kit completo",
+        "precio": 2435,
+        "tipo": "kit parche",
+        "descripcion": "1 Cemento en lata de 250cc con pincel aplicador marca PRECUREX.1 caja de 100 parches redondos de 40mm marca LM.1 Bolsa de 10 unidades de parches cuadrados de 55 x 55mm para cubiertas .1 Terraja saca interiores de válvula mango plástico importada.",
+        "imagen": "../images/tienda/parches/kit-parche-completo.png"
+    },
+    {
+        "id": 8,
+        "nombre": "Galaxylock",
+        "precio": 8265,
+        "tipo": "kit antirobo",
+        "descripcion": "Número infinito de diseño de llaves.El diseño de las llaves impide la remoción utilizando herramientas disponibles en el mercado.Llave autocentrante para fácil montaje y desmontaje.Hexágono de la llave antirrobo permite la utilización de la llave de rueda original del vehículo.Robusto, giratorio y anticorte que impide desatornillar las ruedas con herramientas disponibles en el mercado.Cabeza a prueba de perforación y corte.Cuerpo con clase de resistencia 10.9.Resistencia a la torsión superior a 400Nm.",
+        "imagen": "../images/tienda/kit-antirobo/Galaxylock.png"
+    },
+    {
+        "id": 9,
+        "nombre": "Starlock",
+        "precio": 8700,
+        "tipo": "kit antirobo",
+        "descripcion": "Número infinito de diseño de llaves.El diseño de las llaves impide la remoción utilizando herramientas disponibles en el mercado.Llave autocentrante para fácil montaje y desmontaje.Hexágono de la llave antirrobo permite la utilización de la llave de rueda original del vehículo.Robusto, giratorio y anticorte que impide desatornillar las ruedas con herramientas disponibles en el mercado.Cabeza a prueba de perforación y corte.Cuerpo con clase de resistencia 10.9.Resistencia a la torsión superior a 400Nm.",
+        "imagen": "../images/tienda/kit-antirobo/Starlock.png"
+    },
+    {
+        "id": 10,
+        "nombre": "Microlock",
+        "precio": 8700,
+        "tipo": "kit antirobo",
+        "descripcion": "MICROLOCK® ESTA 100% HECHO EN ITALIA por FARAD, bajo los más altos estándares de calidad en EUROPA.Se vende en las principales AUTOBOUTIQUES de Europa, Estados Unidos y ahora en México!.ÚNICOS CON GARANTÍA ILIMITADA por defecto, por robo y por oxidación (ya que los nuestros son inoxidables).A diferencia de lo que encontramos en el mercado, MICROLOCK es el único que utiliza una “doble llave” para ponerlos y quitarlos, sin esta los birlos o tuercas MICROLOCK quedan dentro del rin y ES IMPOSIBLE DE DESMONTAR SIN LA LLAVE QUE TE ENTREGAMOS!.MÁS DE 10,000 COMBINACIONES DE LLAVES POR MODELO Y VEHÍCULO!",
+        "imagen": "../images/tienda/kit-antirobo/Microlock.png"
+    },
+    {
+        "id": 11,
+        "nombre": "Sparelock",
+        "precio": 1087,
+        "tipo": "kit antirobo",
+        "descripcion": "Garantía antirrobo de por vida!.Inoxidable de por vida!.Repuesto de llave los 365 días del año!",
+        "imagen": "../images/tienda/kit-antirobo/Sparelock.png"
     }
-    
 ]

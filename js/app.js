@@ -2,6 +2,7 @@ const parches = document.getElementById('parches')
 const kitParche = document.getElementById('kit-parche')
 const templateCardParche = document.getElementById('template-card-parche').content
 const templateCardKitParche = document.getElementById('template-card-kit-parche').content
+
 const fragment = document.createDocumentFragment()
 
 
@@ -70,7 +71,7 @@ const pintarCardKitParche = (data) => {
     dataKitParche.forEach(producto => {
         templateCardKitParche.querySelector('h5').textContent = producto.nombre
 
-        // Divido los items de la descipción
+        // Divido los items de la descripción
         let compuestoDe = producto.descripcion.split(".")
         compuestoDe.pop()
 
@@ -93,8 +94,20 @@ const pintarCardKitParche = (data) => {
 
 const addCarrito = e => {
     if(e.target.classList.contains('btn-comprar')){
-        setCarrito(e.target.parentElement)
-        nroItemCarrito.textContent = Object.keys(carrito).length
+        if(localStorage.getItem('usuarioActivo') || sessionStorage.getItem('usuarioActivo')){
+            setCarrito(e.target.parentElement)
+            nroItemCarrito.textContent = Object.keys(carrito).length
+        }
+        else{
+            swal({
+                title: "Inicia sesión",
+                text: "Antes de comprar debes iniciar sesión",
+                icon: "warning",
+                button: "Aceptar",
+                }).then(function(){
+                    window.location.href = './iniciar-sesion.html'
+                });
+        }
     }
     e.stopPropagation()
 }
@@ -107,8 +120,23 @@ const setCarrito = objeto => {
         cantidad: 1
     }
 
+    if(producto.cantidad == 1){
+        swal({
+            title: "Añadido al carrito!",
+            text: `Has añadido ${producto.nombre}`,
+            icon: "success",
+            button: "Aceptar",
+            });
+    }
+    
     if(carrito.hasOwnProperty(producto.id)){
         producto.cantidad = carrito[producto.id].cantidad + 1
+        swal({
+            title: "Añadido al carrito!",
+            text: `Has añadido ${producto.nombre}, llevas ${producto.cantidad}`,
+            icon: "success",
+            button: "Aceptar",
+          });
     }
 
     // Spead operator para hacer una copia del producto que se va a añadir al carrito
@@ -116,4 +144,3 @@ const setCarrito = objeto => {
 
     localStorage.setItem('carrito', JSON.stringify(carrito))
 }
-

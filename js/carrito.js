@@ -1,11 +1,14 @@
 const items = document.getElementById('items')
+const footer = document.getElementById('footer')
+const cobro = document.getElementById('cobro')
+let templateCobro = document.getElementById('template-cobro').content
 const templateFooter = document.getElementById('template-footer').content
 const templateCarrito = document.getElementById('template-carrito').content
 const fragment = document.createDocumentFragment()
 let carrito = {}
 
 document.addEventListener('DOMContentLoaded', () =>{
-    if (localStorage.getItem('carrito')) {
+    if (localStorage.getItem('carrito') && (localStorage.getItem('usuarioActivo')||sessionStorage.getItem('usuarioActivo'))) {
         carrito = JSON.parse(localStorage.getItem('carrito'))
         console.log(carrito)
         pintarCarrito()
@@ -16,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () =>{
 items.addEventListener('click', e =>{
     btnAccion(e)
 })
+
 
 const btnAccion = (e) => {
 
@@ -31,12 +35,33 @@ const btnAccion = (e) => {
     // DISMINUIR
     if(e.target.classList.contains('btn-danger')){
         const producto = carrito[e.target.dataset.id]
-        producto.cantidad--
-        if(producto.cantidad === 0){
-            delete carrito[e.target.dataset.id]
-            nroItemCarrito.textContent = Object.keys(carrito).length
+        if(producto.cantidad === 1){
+            swal({
+                title: "¿Estas seguro?",
+                text: `¿Querés borrar ${producto.nombre} del carrito?`,
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+              }).then((willDelete) => {
+                if (willDelete) {
+                    delete carrito[e.target.dataset.id]
+                    nroItemCarrito.textContent = Object.keys(carrito).length
+                    swal(`Se ha borrado ${producto.nombre} del carrito`, {
+                        icon: "success",
+                    });
+                    pintarCarrito()
+                } 
+                else {
+                  swal(`Tu producto sigue en el carrito`);
+                  pintarCarrito()
+                }
+              });
+
         }
-        pintarCarrito()
+        else{
+            producto.cantidad--
+            pintarCarrito()
+        }    
     }
     e.stopPropagation()
 } 
@@ -77,10 +102,126 @@ const pintarFooter = () =>{
     fragment.appendChild(clone)
     footer.appendChild(fragment)
 
-    const btnVaciar =document.getElementById('vaciar-carrito')
+    const btnVaciar = document.getElementById('vaciar-carrito')
     btnVaciar.addEventListener('click', () =>{
-        carrito = {}
-        nroItemCarrito.textContent = Object.keys(carrito).length
-        pintarCarrito()
+        swal({
+            title: "¿Estas seguro?",
+            text: `¿Querés limpiar el carrito?`,
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+          }).then((willDelete) => {
+            if (willDelete) {
+                carrito = {}
+                nroItemCarrito.textContent = Object.keys(carrito).length
+                swal(`Se ha limpiado el carrito`, {
+                    icon: "success",
+                });
+                pintarCarrito()
+            } 
+            else {
+              swal(`Su carrito sigue igual`);
+              pintarCarrito()
+            }
+          });
+        
     })
-} 
+    const btnPagar = document.getElementById('pagar')
+    btnPagar.addEventListener('click', () =>{
+        if(templateCobro != undefined){
+            if(localStorage.getItem('usuarioActivo')){
+                [usuario, email] = JSON.parse(localStorage.getItem('usuarioActivo')) 
+            }
+            if(sessionStorage.getItem('usuarioActivo')){
+                [usuario, email] = JSON.parse(sessionStorage.getItem('usuarioActivo'))
+            }
+            templateCobro.getElementById('total').value = nPrecio
+            templateCobro.getElementById('usuario').value = usuario
+            templateCobro.getElementById('email').value = email
+            const clone = templateCobro.cloneNode(true)
+            fragment.appendChild(clone)
+            cobro.appendChild(fragment)
+
+            const btn = document.getElementById('btn-pagar');
+
+            document.getElementById('form-cobro').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const checkboxes = cobro.querySelectorAll('input[type="radio"]')
+            console.log(checkboxes)
+            let tipoCobroSeleccionado
+            checkboxes.forEach(check => check.checked == true? tipoCobroSeleccionado = check.value:null)
+            console.log(tipoCobroSeleccionado)
+            
+            btn.value = 'Procesando...';
+            
+            if(tipoCobroSeleccionado != "efectivo"){
+                const serviceID1 = 'default_service';
+                const templateID1 = 'template_58hf8gv';
+
+                emailjs.sendForm(serviceID1, templateID1, this)
+                .then(() => {
+                btn.value = 'Finalizar compra';
+                btn.disabled = true
+                localStorage.removeItem('carrito')
+                swal({
+                    title: "Pago enviado",
+                    text: "Se le ha enviado el comprobante a su cuenta de mail",
+                    icon: "success",
+                    button: "Aceptar",
+                    }).then(function(){
+                        window.location.href = '../index.html'
+                    });;
+                }, (err) => {
+                btn.value = 'Send Email';
+                btn.disabled = true
+                localStorage.removeItem('carrito')
+                swal({
+                    title: "Error",
+                    text: `${JSON.stringify(err)}`,
+                    icon: "error",
+                    button: "Aceptar",
+                    }).then(function(){
+                        window.location.href = '../index.html'
+                    });
+                });
+            }
+            else{
+                const serviceID2 = 'default_service';
+                const templateID2 = 'template_i56it85';
+
+                emailjs.sendForm(serviceID2, templateID2, this)
+                .then(() => {
+                btn.value = 'Finalizar compra';
+                btn.disabled = true
+                localStorage.removeItem('carrito')
+                swal({
+                    title: "Pago enviado",
+                    text: "Se le ha enviado el comprobante a su cuenta de mail",
+                    icon: "success",
+                    button: "Aceptar",
+                    }).then(function(){
+                        window.location.href = '../index.html'
+                    });;
+                }, (err) => {
+                btn.value = 'Send Email';
+                btn.disabled = true
+                localStorage.removeItem('carrito')
+                swal({
+                    title: "Error",
+                    text: `${JSON.stringify(err)}`,
+                    icon: "error",
+                    button: "Aceptar",
+                    }).then(function(){
+                        window.location.href = '../index.html'
+                    });
+                });
+            }
+            
+            });
+        }   
+        templateCobro = undefined;
+    })
+}
+
+

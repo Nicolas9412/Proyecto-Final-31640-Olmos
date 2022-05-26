@@ -411,6 +411,33 @@ font-p {
     font-size: 2em;
 }
 
+/*** BIRLOS ***/
+
+.title-birlos, .subtitle-birlos{
+    font-size: 2em;
+    color: #333;
+	font-weight: bold;
+	position: relative;
+	margin: 30px 0 60px;
+}
+
+.title-birlos::after{
+    content: "";
+    width: 200px;
+    position: absolute;
+    margin: 0 auto;
+    height: 3px;
+    background: #e545c5;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    opacity: .8;
+}
+
+.descripcion{
+    font-size: 0.7em;
+}
+
 /*** CARRITO ***/
 
 .main-carrito{
@@ -455,12 +482,19 @@ font-p {
     transition: all 1s ease;
 }
 
-#password{
+#password, #email{
     margin-left: 9px;
 }
 
 label[for="password"]{
     margin-left: 55px;
+}
+
+
+label[for="mantener"]{
+    position: relative;
+    bottom: 10px;
+    margin-left: 5px;
 }
 
 .register a{
@@ -491,6 +525,10 @@ label[for="password"]{
 .confirmPassword{
     position: relative;
     right: 8px;
+}
+
+label[for="email"]{
+    margin-left: 95px;
 }
 
 
@@ -765,6 +803,12 @@ label[for="password"]{
 
     .confirmPassword{
         margin-left: 16px;
+    }
+
+    label[for="mantener"]{
+        position: relative;
+        bottom: 27px;
+        left: 15px;
     }
 
 }
