@@ -21,9 +21,9 @@
     <!-- Montserrat font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!--Leaflet map CSS-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css" integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ==" crossorigin="" />
 
 </head>
 
@@ -105,9 +105,8 @@
                     </div>
                     <p class="d-inline-block font-p mb-4"> UBICACION </p>
                 </div>
-                <div>
-                    <img src="../images/ubicacion_gvmultillantas.png" class="d-block mx-auto img-fluid mb-5 mt-3"
-                        style="width: 600px;" alt="Ubicacion Gv Multillanta">
+                <div class="my-4" id="map">
+                    
                 </div>
                 <p class="mx-auto text-center font-p-u" style="width: 450px;"> Calle Cóndor 1503 Zitoon Gualupe 671555
                     Guadalupe, Nuevo León, México </p>
@@ -151,5 +150,18 @@
     <!--<script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/nroCarrito.js"></script>
+    <!--Leaflet map JS-->
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js" integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ==" crossorigin=""></script>
+    <script>
+        var map = L.map('map').setView([25.678024, -100.240395], 16);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        L.marker([25.678024, -100.240395]).addTo(map)
+            .bindPopup('Gv Multillantas')
+            .openPopup();
+    </script>
 </body>
 </html>

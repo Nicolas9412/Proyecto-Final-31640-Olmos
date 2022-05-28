@@ -7,6 +7,7 @@ const templateCarrito = document.getElementById('template-carrito').content
 const fragment = document.createDocumentFragment()
 let carrito = {}
 
+
 document.addEventListener('DOMContentLoaded', () =>{
     if (localStorage.getItem('carrito') && (localStorage.getItem('usuarioActivo')||sessionStorage.getItem('usuarioActivo'))) {
         carrito = JSON.parse(localStorage.getItem('carrito'))
@@ -148,19 +149,19 @@ const pintarFooter = () =>{
             event.preventDefault();
 
             const checkboxes = cobro.querySelectorAll('input[type="radio"]')
-            console.log(checkboxes)
             let tipoCobroSeleccionado
             checkboxes.forEach(check => check.checked == true? tipoCobroSeleccionado = check.value:null)
-            console.log(tipoCobroSeleccionado)
-            
-            btn.value = 'Procesando...';
-            
-            if(tipoCobroSeleccionado != "efectivo"){
+            tipoCobroSeleccionado == undefined && swal({title: '¡ Cuidado !',
+                                                        text: 'Debe seleccionar algún método de pago',
+                                                        icon:'warning'}); 
+            if(tipoCobroSeleccionado != "efectivo" && tipoCobroSeleccionado != undefined){
+                btn.value = 'Procesando...';
                 const serviceID1 = 'default_service';
                 const templateID1 = 'template_58hf8gv';
 
                 emailjs.sendForm(serviceID1, templateID1, this)
                 .then(() => {
+                hacerPDF()
                 btn.value = 'Finalizar compra';
                 btn.disabled = true
                 localStorage.removeItem('carrito')
@@ -186,12 +187,14 @@ const pintarFooter = () =>{
                     });
                 });
             }
-            else{
+            else if(tipoCobroSeleccionado == "efectivo" && tipoCobroSeleccionado != undefined){
+                btn.value = 'Procesando...';
                 const serviceID2 = 'default_service';
                 const templateID2 = 'template_i56it85';
 
                 emailjs.sendForm(serviceID2, templateID2, this)
                 .then(() => {
+                hacerPDF()
                 btn.value = 'Finalizar compra';
                 btn.disabled = true
                 localStorage.removeItem('carrito')
@@ -222,6 +225,26 @@ const pintarFooter = () =>{
         }   
         templateCobro = undefined;
     })
+
+    window.html2canvas = html2canvas;
+    window.jsPDF = window.jspdf.jsPDF;
+
+    function hacerPDF(){
+
+        html2canvas(document.querySelector('#capture'),{
+                    allowTaint:true,
+                    useCORS:true,
+                    scale:1
+        }).then(canvas => {
+                var img = canvas.toDataURL("image/png");
+
+                var doc = new jsPDF('l','px','letter');
+                doc.setFont('Arial');
+                doc.getFontSize(11);
+                doc.addImage(img,'PNG',10,10,550,100);
+                doc.save(`Comprobante de compra de ${usuario}`)
+            });
+    }
 }
 
 

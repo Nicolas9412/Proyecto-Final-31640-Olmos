@@ -71,14 +71,6 @@
         "imagen": "../images/tienda/parches/kit-parche-completo.png"
     },
     {
-        "id": 7,
-        "nombre": "Kit completo",
-        "precio": 2435,
-        "tipo": "kit parche",
-        "descripcion": "1 Cemento en lata de 250cc con pincel aplicador marca PRECUREX.1 caja de 100 parches redondos de 40mm marca LM.1 Bolsa de 10 unidades de parches cuadrados de 55 x 55mm para cubiertas .1 Terraja saca interiores de válvula mango plástico importada.",
-        "imagen": "../images/tienda/parches/kit-parche-completo.png"
-    },
-    {
         "id": 8,
         "nombre": "Galaxylock",
         "precio": 8265,
