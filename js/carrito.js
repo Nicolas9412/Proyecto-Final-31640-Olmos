@@ -11,7 +11,6 @@ let carrito = {}
 document.addEventListener('DOMContentLoaded', () =>{
     if (localStorage.getItem('carrito') && (localStorage.getItem('usuarioActivo')||sessionStorage.getItem('usuarioActivo'))) {
         carrito = JSON.parse(localStorage.getItem('carrito'))
-        console.log(carrito)
         pintarCarrito()
     }
     Object.keys(carrito).length === 0? nroItemCarrito.textContent = 0 : nroItemCarrito.textContent = Object.keys(carrito).length
